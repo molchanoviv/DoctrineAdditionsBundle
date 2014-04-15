@@ -73,6 +73,7 @@ class AssociationPropertyOverrideSubscriber implements EventSubscriber
      */
     public function loadClassMetadata(LoadClassMetadataEventArgs $args)
     {
+        /** @var ClassMetadataInfo $metadata */
         $metadata = $args->getClassMetadata();
         /** @var AssociationPropertyOverride $annotation */
         $annotation = $this->annotationReader->getClassAnnotation($metadata->getReflectionClass(), $this->annotationClass);
